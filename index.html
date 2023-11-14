@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscriber Count</title>
+  
+</head>
+<body>
+  <div id="count">0</div>
+
+  <style>
+    #count {
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+  <script>
+    
+    let count = 0;
+    let speed = 10000;
+
+    function increaseCount() {
+      count += 5;
+      document.getElementById('count').textContent = count;
+
+      if (speed > 100) {
+        speed -= 100;
+      }
+
+      setTimeout(increaseCount, speed);
+    }
+
+    increaseCount();
+  
+  </script>
+</body>
+</html>
